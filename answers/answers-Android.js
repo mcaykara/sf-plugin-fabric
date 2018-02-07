@@ -10,7 +10,6 @@ Answers.logCustom = function(eventName, customAttributes){
 	var event = new Answers.CustomEvent(eventName);
 
 	for(var i = 0 ; i<customAttributes.length ; i++){
-		alert(customAttributes[i].key + "  -  " + customAttributes[i].value)
 		event = event.putCustomAttribute(customAttributes[i].key, customAttributes[i].value);
 	}
 	Answers.NativeClass.getInstance().logCustom(event);
