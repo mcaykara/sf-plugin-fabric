@@ -1,39 +1,43 @@
 function Crashlytics() {
-	this.nativeClass = requireClass("com.crashlytics.android.Crashlytics");
+	this.nativeClass = Crashlytics.NativeClass;
 }
 
-Crashlytics.nativeClass = requireClass("com.crashlytics.android.Crashlytics");
+Crashlytics.NativeClass = requireClass("com.crashlytics.android.Crashlytics");
 
 Crashlytics.setUserIdentifier = function(identifier){
-    Crashlytics.nativeClass.setUserIdentifier(identifier);
+    Crashlytics.NativeClass.setUserIdentifier(identifier);
 };
 
 Crashlytics.setUserName = function(name){
-    Crashlytics.nativeClass.setUserName(name);
+    Crashlytics.NativeClass.setUserName(name);
 };
 
 Crashlytics.setUserEmail = function(email){
-    Crashlytics.nativeClass.setUserEmail(email);
+    Crashlytics.NativeClass.setUserEmail(email);
+};
+
+Crashlytics.setString = function(key, value){
+    Crashlytics.NativeClass.setString(key, value);
 };
 
 Crashlytics.setBool = function(key, value){
-    Crashlytics.nativeClass.setBool(key, value);
-};
-
-Crashlytics.setDouble = function(key, value){
-    Crashlytics.nativeClass.setDouble(key, value);
+    Crashlytics.NativeClass.setBool(key, value);
 };
 
 Crashlytics.setFloat = function(key, value){
-    Crashlytics.nativeClass.setFloat(key, value);
+    Crashlytics.NativeClass.setFloat(key, value);
 };
 
 Crashlytics.setInt = function(key, value){
-    Crashlytics.nativeClass.setInt(key, value);
+    Crashlytics.NativeClass.setInt(key, value);
+};
+
+Crashlytics.getVersion = function(){
+    return Crashlytics.NativeClass.getInstance().getVersion();
 };
 
 Crashlytics.crash = function(){
-    Crashlytics.nativeClass.getInstance().crash();
+    Crashlytics.NativeClass.getInstance().crash();
 };
 
 module && (module.exports = Crashlytics);
