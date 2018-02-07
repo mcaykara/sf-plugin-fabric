@@ -23,24 +23,45 @@ Smartface Fabric plugin can be installed via npm easily from our public npm repo
 ## How to use
 
 ```javascript
+
+// app.js :
+// ---------------------------------------------------------------------------------
+    // This codes should be written in the app.js file.
+    const Fabric = require("sf-plugin-fabric");   
+    const Crashlytics = require("sf-plugin-fabric/crashlytics");
+    const Answers = require("sf-plugin-fabric/answers");
+    
+    Fabric.with([new Crashlytics(),new Answers()]);
+// ---------------------------------------------------------------------------------
+
+// logCustom is usable any page. Example: 
+// ---------------------------------------------------------------------------------
+    const Answers = require("sf-plugin-fabric/answers");
+    Answers.logCustom('Log-Title', 
+        [
+            // Value must be only string or number
+            new Answers.CustomAttribute("key1","value1"), 
+            new Answers.CustomAttribute("key2",2)
+        ] 
+    );
+// ---------------------------------------------------------------------------------
+
+
 const Page = require("sf-core/ui/page");
 const Page = require("sf-core/ui/page");
 const extend = require("js-base/core/extend");
 
+const Fabric = require("sf-plugin-fabric");   
+const Crashlytics = require("sf-plugin-fabric/crashlytics");
+const Answers = require("sf-plugin-fabric/answers");
+                
 var Page1 = extend(Page)(
     function(_super) {
         _super(this, {
             onShow: function(params) {
                 this.statusBar.visible = true;
                 this.headerBar.visible = true;
-                
-                const Fabric = require("sf-plugin-fabric");   
-                const Crashlytics = require("sf-plugin-fabric/crashlytics");
-                const Answers = require("sf-plugin-fabric/answers");
-
-                // This line should be written in the app.js file.
-                Fabric.with([new Crashlytics(),new Answers()]);
-                         
+       
                 /*
                   You can use Crashlytics.setUserIdentifier to provide an ID number, token, or hashed value that uniquely     
                   identifies the end-user of your application without disclosing or transmitting any of their personal 
