@@ -38,11 +38,9 @@ var Page1 = extend(Page)(
                 const Crashlytics = require("sf-plugin-fabric/crashlytics");
                 const Answers = require("sf-plugin-fabric/answers");
 
+                // This line should be written in the app.js file.
                 Fabric.with([new Crashlytics(),new Answers()]);
-                
-                // Get Crashlytics Version:
-                alert(Crashlytics.getVersion());
-                
+                         
                 /*
                   You can use Crashlytics.setUserIdentifier to provide an ID number, token, or hashed value that uniquely     
                   identifies the end-user of your application without disclosing or transmitting any of their personal 
