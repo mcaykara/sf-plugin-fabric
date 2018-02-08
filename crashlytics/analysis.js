@@ -1,64 +1,148 @@
 /**
- * @class Facebook
+ * @class Crashlytics
  * @since 1.0
- * @see https://developers.facebook.com/
- * @see https://developer.smartface.io/v1.1/docs/facebook-plugin
+ * @see https://fabric.io/home
  *
- * Facebook SDK for iOS and Android allows developers to use some Facebook features with your app such as “share” or “send a message” 
- * from your app to Facebook. It lets people easily sign in to your app with their Facebook accounts. If they have already signed in
- * with Facebook for iOS and Android app, they don’t have to re-enter their username and password. We’ve already integrated iOS and 
- * Android Facebook SDK into Smartface . You only need to create an application on Facebook developer site and need to know JavaScript 
- * functions of the Smartface Facebook plugin.
- * 
- * 
- *     @example
- *     
+ * Spend less time finding and more time fixing crashes. 
+ * Named the #1 performance SDK on both iOS and Android, Crashlytics provides deep and actionable insights, even the exact line of code your app crashed on.
  *
  */
-function Fabric(params){}
+function Crashlytics(params){}
 
 /**
- * A model for video content to be shared.
+ * You can use Crashlytics.setUserIdentifier to provide an ID number, token, or hashed value that uniquely identifies the end-user of your application without disclosing or transmitting any of their personal information. 
+ * This value is displayed right in the Fabric dashboard.
  *
  *     @example
- *       Multimedia.pickFromGallery({
- *           type: Multimedia.Type.VIDEO,
- *           onSuccess: onSuccess,
- *           page : this
- *        });
+ *      const Crashlytics = require('sf-plugin-fabric/crashlytics');
+ *      Crashlytics.setUserIdentifier("UserIdentifier");
  *
- *       function onSuccess(picked) {
- *           var video = picked.video;
- *           var shareVideo = new Facebook.ShareVideo();
- *           shareVideo.videoFile = video;
- *
- *           Facebook.shareVideoContent({
- *                page : this,
- *                shareVideo : shareVideo,
- *                peopleIds : ["AaJcJfLdxS-rC9PmYMhzQL7_6LriPY46JzizQZ25"],
- *                shareHashtag : new Facebook.ShareHashtag({hashTag :"#HashTag"}),
- *                quote : "quote",
- *                placeId : "572462939538226",
- *                ref : "refString",
- *                onSuccess : function(data){
- *                    alert("data : " + JSON.stringify(data));
- *                },
- *                onCancel : function(){
- *                    alert("cancel");
- *                },
- *                onFailure : function(error){
- *                    alert(error.message);
- *                }
- *            });
- *       }
- *
- * @method with
- * @param {Array} kits
+ * @method setUserIdentifier
+ * @param {String} UserIdentifier
  * @android
  * @ios
  * @static
  * @since 1.0
  */
-Fabric.with = function(kits){};
+Crashlytics.setUserIdentifier = function(identifier){};
 
-module.exports = Fabric;
+/**
+ * If you would like to take advantage of advanced user identifier features, you can setUserName function.
+ *
+ *     @example
+ *      const Crashlytics = require('sf-plugin-fabric/crashlytics');
+ *      Crashlytics.setUserName("UserName");
+ *
+ * @method setUserName
+ * @param {String} UserName
+ * @android
+ * @ios
+ * @static
+ * @since 1.0
+ */
+Crashlytics.setUserName = function(name){};
+
+/**
+ * If you would like to take advantage of advanced user identifier features, you can setUserEmail function.
+ *
+ *     @example
+ *      const Crashlytics = require('sf-plugin-fabric/crashlytics');
+ *      Crashlytics.setUserEmail("UserEmail");
+ *
+ * @method setUserEmail
+ * @param {String} UserEmail
+ * @android
+ * @ios
+ * @static
+ * @since 1.0
+ */
+Crashlytics.setUserEmail = function(email){};
+
+/**
+ * Crashlytics allows you to associate arbitrary key/value pairs with your crash reports, which are viewable right from the Crashlytics dashboard. 
+ * Setting keys are as easy as calling: Crashlytics.setString(key, value).
+ *
+ *     @example
+ *      const Crashlytics = require('sf-plugin-fabric/crashlytics');
+ *      Crashlytics.setString("key","value");
+ *
+ * @method setString
+ * @param {String} key
+ * @param {String} value
+ * @android
+ * @ios
+ * @static
+ * @since 1.0
+ */
+Crashlytics.setString = function(key, value){};
+
+/**
+ * Crashlytics allows you to associate arbitrary key/value pairs with your crash reports, which are viewable right from the Crashlytics dashboard. 
+ * Setting keys are as easy as calling: Crashlytics.setBool(key, value).
+ *
+ *     @example
+ *      const Crashlytics = require('sf-plugin-fabric/crashlytics');
+ *      Crashlytics.setBool("key",true);
+ *
+ * @method setBool
+ * @param {String} key
+ * @param {boolean} value
+ * @android
+ * @ios
+ * @static
+ * @since 1.0
+ */
+Crashlytics.setBool = function(key, value){};
+
+/**
+ * Crashlytics allows you to associate arbitrary key/value pairs with your crash reports, which are viewable right from the Crashlytics dashboard. 
+ * Setting keys are as easy as calling: Crashlytics.setFloat(key, value).
+ *
+ *     @example
+ *      const Crashlytics = require('sf-plugin-fabric/crashlytics');
+ *      Crashlytics.setFloat("key",true);
+ *
+ * @method setFloat
+ * @param {String} key
+ * @param {number} value
+ * @android
+ * @ios
+ * @static
+ * @since 1.0
+ */
+Crashlytics.setFloat = function(key, value){};
+
+/**
+ * Crashlytics allows you to associate arbitrary key/value pairs with your crash reports, which are viewable right from the Crashlytics dashboard. 
+ * Setting keys are as easy as calling: Crashlytics.setInt(key, value).
+ *
+ *     @example
+ *      const Crashlytics = require('sf-plugin-fabric/crashlytics');
+ *      Crashlytics.setInt("key",true);
+ *
+ * @method setInt
+ * @param {String} key
+ * @param {number} value
+ * @android
+ * @ios
+ * @static
+ * @since 1.0
+ */
+Crashlytics.setInt = function(key, value){};
+
+/**
+ * Crashlytics version
+ *
+ *     @example
+ *      const Crashlytics = require('sf-plugin-fabric/crashlytics');
+ *      Crashlytics.getVersion();
+ *
+ * @method getVersion
+ * @android
+ * @ios
+ * @static
+ * @since 1.0
+ */
+Crashlytics.getVersion = function(){};
+
+module.exports = Crashlytics;
