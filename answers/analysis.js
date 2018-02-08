@@ -1,64 +1,50 @@
 /**
- * @class Facebook
+ * @class Answers
  * @since 1.0
- * @see https://developers.facebook.com/
- * @see https://developer.smartface.io/v1.1/docs/facebook-plugin
+ * @see https://fabric.io/home
  *
- * Facebook SDK for iOS and Android allows developers to use some Facebook features with your app such as “share” or “send a message” 
- * from your app to Facebook. It lets people easily sign in to your app with their Facebook accounts. If they have already signed in
- * with Facebook for iOS and Android app, they don’t have to re-enter their username and password. We’ve already integrated iOS and 
- * Android Facebook SDK into Smartface . You only need to create an application on Facebook developer site and need to know JavaScript 
- * functions of the Smartface Facebook plugin.
- * 
- * 
- *     @example
- *     
+ * With one click, you can enable real-time analytics that help you understand what’s happening in your app. 
+ * Fabric provides insights into your core goals, such as growth, retention, and engagement. 
+ * Finally, analytics you don’t need to analyze.
  *
  */
-function Fabric(params){}
+function Answers(params){}
 
 /**
- * A model for video content to be shared.
+ * CustomAttribute for logCustom.
  *
  *     @example
- *       Multimedia.pickFromGallery({
- *           type: Multimedia.Type.VIDEO,
- *           onSuccess: onSuccess,
- *           page : this
- *        });
+ *      const Answers = require('sf-plugin-fabric/answers');
+ *		var attribute1 = new Answers.CustomAttribute("key","value");
+ *		var attribute2 = new Answers.CustomAttribute("key",12);
  *
- *       function onSuccess(picked) {
- *           var video = picked.video;
- *           var shareVideo = new Facebook.ShareVideo();
- *           shareVideo.videoFile = video;
- *
- *           Facebook.shareVideoContent({
- *                page : this,
- *                shareVideo : shareVideo,
- *                peopleIds : ["AaJcJfLdxS-rC9PmYMhzQL7_6LriPY46JzizQZ25"],
- *                shareHashtag : new Facebook.ShareHashtag({hashTag :"#HashTag"}),
- *                quote : "quote",
- *                placeId : "572462939538226",
- *                ref : "refString",
- *                onSuccess : function(data){
- *                    alert("data : " + JSON.stringify(data));
- *                },
- *                onCancel : function(){
- *                    alert("cancel");
- *                },
- *                onFailure : function(error){
- *                    alert(error.message);
- *                }
- *            });
- *       }
- *
- * @method with
- * @param {Array} kits
  * @android
  * @ios
  * @static
  * @since 1.0
  */
-Fabric.with = function(kits){};
+Answers.CustomAttribute = {key,value};
 
-module.exports = Fabric;
+/**
+ * To log a custom event to be sent to Answers, use the following
+ *
+ *     @example
+ *      const Answers = require('sf-plugin-fabric/answers');
+ *		Answers.logCustom('your-event-name', 
+	 		[
+	 			new Answers.CustomAttribute("key1","value"), 
+	 			new Answers.CustomAttribute("key2",12)
+	 		] 
+ 		);
+ *
+ * @method logCustom
+ * @param {String} eventName
+ * @param {Array} Answers.CustomAttribute
+ * @android
+ * @ios
+ * @static
+ * @since 1.0
+ */
+Answers.logCustom = function(eventName, customAttributes){}
+
+module.exports = Answers;
