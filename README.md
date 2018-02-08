@@ -43,10 +43,10 @@ Smartface Fabric plugin can be installed via npm easily from our public npm repo
 ```
 - Add fabric plugin to config/project.json file with API Key and Build Secret.
 You can find API_KEY and BUILD_SECRET by following the steps below
-1 - Settings
-2 - Organizations
-3 - Select Organization
-4 - Click Api key and Build secret
+<p>1 - Settings</p>
+<p>1 - Organizations</p>
+<p>1 - Select Organization</p>
+<p>1 - Click Api key and Build secret</p>
 ```javascript
 "fabricios": {
     "url": "",
