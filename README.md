@@ -47,17 +47,21 @@ You can find API_KEY and BUILD_SECRET by following the steps below
 <p>&emsp;2 - Organizations</p>
 <p>&emsp;3 - Select Organization</p>
 <p>&emsp;4 - Click Api key and Build secret</p>
+
 ```javascript
+
 "fabricios": {
     "url": "",
 	"path": "plugins/iOS/fabricios.zip",
 	"active": true,
 	"fabric": {
-	"API_KEY" : "API_KEY",
-	"BUILD_SECRET" : "BUILD_SECRET"
+		"API_KEY" : "API_KEY",
+		"BUILD_SECRET" : "BUILD_SECRET"
 	}
 }
+
 ```
+
 ## How to use
 
 ```javascript
