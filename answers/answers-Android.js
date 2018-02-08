@@ -8,11 +8,11 @@ Answers.CustomAttribute = require("./customattribute");
 
 Answers.logCustom = function(eventName, customAttributes){
 	var event = new Answers.CustomEvent(eventName);
-
-	for(var i = 0 ; i<customAttributes.length ; i++){
-		event = event.putCustomAttribute(customAttributes[i].key, customAttributes[i].value);
+	if(customAttributes){
+		for(var i = 0 ; i<customAttributes.length ; i++){
+			event = event.putCustomAttribute(customAttributes[i].key, customAttributes[i].value);
+		}
 	}
 	Answers.NativeClass.getInstance().logCustom(event);
 }
-
 module && (module.exports = Answers);
