@@ -58,10 +58,10 @@
 		C303C5D61FA074F5003CEEF0 /* ZXingObjC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C303C5D41FA074F2003CEEF0 /* ZXingObjC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C308737E1E5DBD3E0073D30C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C308737D1E5DBD3D0073D30C /* WebKit.framework */; };
 		C30A36D4202B1F1F00E8096B /* Fabric+SF.m in Sources */ = {isa = PBXBuildFile; fileRef = C30A36CC202B1F1F00E8096B /* Fabric+SF.m */; };
-		C30A36D5202B1F1F00E8096B /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30A36CD202B1F1F00E8096B /* Fabric.framework */; };
-		C30A36D6202B1F1F00E8096B /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30A36CE202B1F1F00E8096B /* Crashlytics.framework */; };
 		C30A36D7202B1F1F00E8096B /* Answers+SF.m in Sources */ = {isa = PBXBuildFile; fileRef = C30A36D2202B1F1F00E8096B /* Answers+SF.m */; };
 		C30A36D8202B1F1F00E8096B /* Crashlytics+SF.m in Sources */ = {isa = PBXBuildFile; fileRef = C30A36D3202B1F1F00E8096B /* Crashlytics+SF.m */; };
+		C3390563202C55BA00151362 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30A36CD202B1F1F00E8096B /* Fabric.framework */; };
+		C3390564202C55BC00151362 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30A36CE202B1F1F00E8096B /* Crashlytics.framework */; };
 		E407BFE413D6F24400A7B3BD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E407BFE313D6F24400A7B3BD /* MapKit.framework */; };
 		E43FB52C13CF681D004A4669 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E43FB52B13CF681D004A4669 /* UIKit.framework */; };
 		E43FB52E13CF681D004A4669 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E43FB52D13CF681D004A4669 /* Foundation.framework */; };
@@ -202,14 +202,14 @@
 		61F73F081B739F5F003AADE5 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		C303C5D41FA074F2003CEEF0 /* ZXingObjC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZXingObjC.framework; path = ZXingObjC/Release/ZXingObjC.framework; sourceTree = "<group>"; };
 		C308737D1E5DBD3D0073D30C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		C30A36CC202B1F1F00E8096B /* Fabric+SF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Fabric+SF.m"; sourceTree = "<group>"; };
-		C30A36CD202B1F1F00E8096B /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
-		C30A36CE202B1F1F00E8096B /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
-		C30A36CF202B1F1F00E8096B /* Crashlytics+SF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Crashlytics+SF.h"; sourceTree = "<group>"; };
-		C30A36D0202B1F1F00E8096B /* Answers+SF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Answers+SF.h"; sourceTree = "<group>"; };
-		C30A36D1202B1F1F00E8096B /* Fabric+SF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Fabric+SF.h"; sourceTree = "<group>"; };
-		C30A36D2202B1F1F00E8096B /* Answers+SF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Answers+SF.m"; sourceTree = "<group>"; };
-		C30A36D3202B1F1F00E8096B /* Crashlytics+SF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Crashlytics+SF.m"; sourceTree = "<group>"; };
+		C30A36CC202B1F1F00E8096B /* Fabric+SF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Fabric+SF.m"; path = "Smartface/Plugins/Fabric/Fabric+SF.m"; sourceTree = SOURCE_ROOT; };
+		C30A36CD202B1F1F00E8096B /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = Smartface/Plugins/Fabric/Fabric.framework; sourceTree = SOURCE_ROOT; };
+		C30A36CE202B1F1F00E8096B /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = Smartface/Plugins/Fabric/Crashlytics.framework; sourceTree = SOURCE_ROOT; };
+		C30A36CF202B1F1F00E8096B /* Crashlytics+SF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Crashlytics+SF.h"; path = "Smartface/Plugins/Fabric/Crashlytics+SF.h"; sourceTree = SOURCE_ROOT; };
+		C30A36D0202B1F1F00E8096B /* Answers+SF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Answers+SF.h"; path = "Smartface/Plugins/Fabric/Answers+SF.h"; sourceTree = SOURCE_ROOT; };
+		C30A36D1202B1F1F00E8096B /* Fabric+SF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Fabric+SF.h"; path = "Smartface/Plugins/Fabric/Fabric+SF.h"; sourceTree = SOURCE_ROOT; };
+		C30A36D2202B1F1F00E8096B /* Answers+SF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Answers+SF.m"; path = "Smartface/Plugins/Fabric/Answers+SF.m"; sourceTree = SOURCE_ROOT; };
+		C30A36D3202B1F1F00E8096B /* Crashlytics+SF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Crashlytics+SF.m"; path = "Smartface/Plugins/Fabric/Crashlytics+SF.m"; sourceTree = SOURCE_ROOT; };
 		E407BFE313D6F24400A7B3BD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E43FB52713CF681D004A4669 /* Smartface-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smartface-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E43FB52B13CF681D004A4669 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -233,8 +233,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C30A36D5202B1F1F00E8096B /* Fabric.framework in Frameworks */,
 				FD8EA6B21E5C49E400D2494B /* Contacts.framework in Frameworks */,
+				C3390564202C55BC00151362 /* Crashlytics.framework in Frameworks */,
+				C3390563202C55BA00151362 /* Fabric.framework in Frameworks */,
 				FD8EA6B31E5C49E400D2494B /* ContactsUI.framework in Frameworks */,
 				C308737E1E5DBD3E0073D30C /* WebKit.framework in Frameworks */,
 				FD69B8A51E07F83F00F36BAA /* SMFCore.framework in Frameworks */,
@@ -243,7 +244,6 @@
 				615596081C3303DD002C467E /* LocalAuthentication.framework in Frameworks */,
 				0C695AFB1B8CEFDD006F189D /* JavaScriptCore.framework in Frameworks */,
 				0C0746D619D2EF82007630CA /* EventKit.framework in Frameworks */,
-				C30A36D6202B1F1F00E8096B /* Crashlytics.framework in Frameworks */,
 				0C0746D719D2EF82007630CA /* EventKitUI.framework in Frameworks */,
 				0CAA2C2D19C09529000032F9 /* CoreText.framework in Frameworks */,
 				0C2ABDEA194F2D5F001EB99B /* CoreBluetooth.framework in Frameworks */,
@@ -396,8 +396,9 @@
 				C30A36CF202B1F1F00E8096B /* Crashlytics+SF.h */,
 				C30A36D3202B1F1F00E8096B /* Crashlytics+SF.m */,
 			);
-			path = Fabric;
-			sourceTree = "<group>";
+			name = Fabric;
+			path = Smartface/Plugins/Fabric;
+			sourceTree = SOURCE_ROOT;
 		};
 		E43FB51C13CF681D004A4669 = {
 			isa = PBXGroup;
@@ -698,6 +699,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				COMPRESS_PNG_FILES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = "";
@@ -712,6 +714,7 @@
 					"$(PROJECT_DIR)/Smartface/smflibs/Alamofire/$(CONFIGURATION)",
 					"$(PROJECT_DIR)/Smartface/smflibs/SQLite/$(CONFIGURATION)",
 					"$(PROJECT_DIR)/Smartface/smflibs/ZXingObjC/$(CONFIGURATION)",
+					"$(PROJECT_DIR)/Smartface/Plugins/Fabric",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -745,6 +748,7 @@
 				PRODUCT_NAME = "Smartface-Demo";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Smartface/Smartface-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Smartface-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -768,6 +772,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				COMPRESS_PNG_FILES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEVELOPMENT_TEAM = "";
@@ -782,6 +787,7 @@
 					"$(PROJECT_DIR)/Smartface/smflibs/Alamofire/$(CONFIGURATION)",
 					"$(PROJECT_DIR)/Smartface/smflibs/SQLite/$(CONFIGURATION)",
 					"$(PROJECT_DIR)/Smartface/smflibs/ZXingObjC/$(CONFIGURATION)",
+					"$(PROJECT_DIR)/Smartface/Plugins/Fabric",
 				);
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -814,6 +820,7 @@
 				PRODUCT_NAME = "Smartface-Demo";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Smartface/Smartface-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Smartface-Swift.h";
 				SWIFT_VERSION = 3.2;
