@@ -16,6 +16,11 @@ Smartface Fabric plugin can be installed via npm easily from our public npm repo
 - Open build.gradle in native plugin project and change applicationId property with your package name.
 - Open AndroidManifext.xml in native plugin project and change io.fabric.ApiKey property with your key.
 - And follow the Developing Android Plugins document. [https://developer.smartface.io/docs/android-plugins](https://developer.smartface.io/docs/android-plugins)
+- Open AndroidManifext.xml in Smartface Cloud Project and add io.fabric.ApiKey property with your key.
+
+```xml
+<meta-data android:name="io.fabric.ApiKey" android:value="YOUT-API-KEY"/>
+```
 
 ### iOS
 - Add API_KEY in config/iOS/Info.plist
