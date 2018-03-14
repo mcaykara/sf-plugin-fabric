@@ -14,7 +14,12 @@ Answers.logCustom = function(eventName, customAttributes){
 		var event = new Answers.CustomEvent(eventName);
 		if(customAttributes){
 			for(var i = 0 ; i<customAttributes.length ; i++){
-				event = event.putCustomAttribute(customAttributes[i].key, customAttributes[i].value);
+				if(customAttributes[i].key && customAttributes[i].value){
+					event = event.putCustomAttribute(customAttributes[i].key, customAttributes[i].value);
+				}	
+				else {
+	        		throw Error("key/value must not be null");
+	        	}	
 			}
 		}
 		Answers.NativeClass.getInstance().logCustom(event);

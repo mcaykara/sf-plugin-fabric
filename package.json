@@ -1,6 +1,6 @@
 {
   "name": "sf-plugin-fabric",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Smartface Fabric Plugin for Smartface Native Framework",
   "main": "index.js",
   "scripts": {
