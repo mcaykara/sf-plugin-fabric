@@ -64,8 +64,8 @@ You can find API_KEY and BUILD_SECRET by following the steps below
 		"BUILD_SECRET" : "BUILD_SECRET"
 	}
 }
-
 ```
+- Put the property under build/input/ios/plugins
 
 ## How to use
 
