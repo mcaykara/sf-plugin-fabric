@@ -579,7 +579,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# unzip plugin frameworks to their related folders\nPLUGIN_ROOT=${SOURCE_ROOT}/Smartface/Plugins/\n\nunzip -o \"${PLUGIN_ROOT}/dummy.zip\" -d \"${PLUGIN_ROOT}/\"\nrm -rf \"$PLUGIN_ROOT/dummy.zip\"";
+			shellScript = "# unzip plugin frameworks to their related folders\nPLUGIN_ROOT=${SOURCE_ROOT}/Smartface/Plugins/\n\nunzip -o \"${PLUGIN_ROOT}/dummy.zip\" -d \"${PLUGIN_ROOT}/\"\nrm -rf \"$PLUGIN_ROOT/dummy.zip\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
